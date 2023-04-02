@@ -24,6 +24,22 @@ body {
 }
 </style>
 
+<div id="twitch-embed" style="opacity: 25%; position: absolute; top: 0; left: 0; z-index: -100"></div>
+  
+      <!-- Load the Twitch embed script -->
+      <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+  
+      <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+      <script type="text/javascript">
+        new Twitch.Player("twitch-embed", {
+          width: window.innerWidth-15,
+          height: window.innerHeight-20,
+          theme: "dark",
+          channel: "Highsens__"
+        });
+  </script>
+
+
 <script>__wm.rw(0);</script>
 </script>
 <div id="main">
@@ -55,7 +71,6 @@ body {
 <li><a data-placement="bottom" title="Twitch" style="border-radius:20px;" class="fa fa-twitch" target="_blank" href="https://www.twitch.tv/highsens__"><div class="overlay"></div></a></li>
 </ul>
 </div>
-<iframe src="https://player.twitch.tv/?channel=highsens__&parent=highsensss.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
 <br/>
 <div>
 </div>
@@ -67,11 +82,11 @@ body {
 </section>
 </div>
 <script type="text/javascript" src="assets/js/main.js"></script>
+
 <style>
   ::-webkit-scrollbar {
     width: 20px;
   }
-   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(255, 255, 255); 
@@ -82,3 +97,5 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: #ffffff; 
   }
+
+  
